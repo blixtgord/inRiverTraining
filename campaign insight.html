@@ -1,0 +1,93 @@
+<!-- https://community.inriver.com/product/technical-descriptions/edit-in-context-templates/ -->
+
+<html inriver-razor-template="true">
+<head>
+    <style>
+        body {
+            font-family: 'Lato',Arial,sans-serif;
+            margin: 5px;
+        }
+
+        .campaign-list li {
+            padding: 5px;
+        }
+
+            .campaign-list li > label {
+                display: inline-block;
+                width: 150px;
+                font-weight: bold;
+                vertical-align: top;
+            }
+
+            .campaign-list li > span {
+                display: inline-block;
+                white-space: normal;
+            }
+
+        table {
+            border-spacing: 10px 20px;
+            border-collapse: separate;
+            text-align: left;
+        }
+
+        .flat-ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: #fafafa; padding: 10px;">
+        <div style="display: inline-block; vertical-align: top;">
+            <img src="@TemplateHelper.PictureUrl(Model)" style="max-width: 120px; margin: 5px 10px; border: 10px solid #fff; border-radius: 5px;">
+        </div>
+        <div style="display: inline-block; vertical-align: top;">
+            <ul class="campaign-list flat-ul">
+                <li>
+                    <label>Campaign Name</label>
+                    <span>@TemplateHelper.FieldValue(Model, "CampaignName") @TemplateHelper.FieldEditor(Model, "CampaignName")</span>
+                </li>
+                <li>
+                    <label>Start Date</label>
+                    <span>@TemplateHelper.FieldValue(Model, "CampaignStartDate") @TemplateHelper.FieldEditor(Model, "CampaignStartDate")</span>
+                </li>
+                <li>
+                    <label>End Date</label>
+                    <span>@TemplateHelper.FieldValue(Model, "CampaignEndDate") @TemplateHelper.FieldEditor(Model, "CampaignEndDate")</span>
+                </li>
+                <li>
+                    <label>Type</label>
+
+                    <span>@TemplateHelper.FieldValue(Model, "CampaignType") @TemplateHelper.FieldEditor(Model, "CampaignType")</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <h3>Included Products</h3>
+        <table>
+            <tr>
+                <th></th>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Approved</th>
+            </tr>
+
+            @* Loop over linked entities of type "Product" *@
+            @foreach (var subModel in TemplateHelper.GetSubEntityModels(Model, "Product"))
+            {
+            <tr>
+                <td><img src="@TemplateHelper.PictureUrl(subModel)" style="max-width: 60px;"></td>
+                <td>@TemplateHelper.FieldValue(subModel, "ProductNumber") @TemplateHelper.FieldEditor(subModel, "ProductNumber")</td>
+                <td>@TemplateHelper.FieldValue(subModel, "ProductName") @TemplateHelper.FieldEditor(subModel, "ProductName")</td>
+                <td>@TemplateHelper.FieldValue(subModel, "ProductShortDescription") @TemplateHelper.FieldEditor(subModel, "ProductShortDescription")</td>
+                <td>@TemplateHelper.FieldValue(subModel, "ProductApproved") @TemplateHelper.FieldEditor(subModel, "ProductApproved")</td>
+            </tr>
+            }
+
+        </table>
+    </div>
+</body>
+</html>
