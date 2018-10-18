@@ -11,3 +11,7 @@ C:\projects\Inriver training\DeveloperTraining\API_Basics\obj\Debug\API_Basics.c
 C:\projects\Inriver training\DeveloperTraining\API_Basics\obj\Debug\API_Basics.csproj.CopyComplete
 C:\projects\Inriver training\DeveloperTraining\API_Basics\obj\Debug\API_Basics.exe
 C:\projects\Inriver training\DeveloperTraining\API_Basics\obj\Debug\API_Basics.pdb
+C:\projects\Inriver training\DeveloperTraining\API_Basics\bin\Debug\ChangeSender.dll
+C:\projects\Inriver training\DeveloperTraining\API_Basics\bin\Debug\IntegrationLib.dll
+C:\projects\Inriver training\DeveloperTraining\API_Basics\bin\Debug\ChangeSender.pdb
+C:\projects\Inriver training\DeveloperTraining\API_Basics\bin\Debug\IntegrationLib.pdb

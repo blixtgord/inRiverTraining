@@ -26,6 +26,16 @@ namespace ChangeSender
 
         public void EntityCreated(int entityId)
         {
+            var entity = Context.ExtensionManager.DataService.GetEntity(entityId, LoadLevel.DataAndLinks);
+
+            Context.Log(inRiver.Remoting.Log.LogLevel.Information, $"This is the type: {entity.EntityType.Id}");
+
+            if(entity.EntityType.Id == "Task" || 
+                (entity.EntityType.Id == "Rescource" && entity.GetField("Name").Data.ToString().StartsWith("Changes_"))) {
+                Context.Log(inRiver.Remoting.Log.LogLevel.Information, $"This should not be saved!!! XSX");
+
+                return;
+            }
             ConnectorStateHelper.Instance.Save(GetConnectorStateId(), new CustomerYXZConnectorMessage { Action = MessageTypes.EntityCreated, Id = entityId , User = Context.Username}, Context);
             Context.Log(inRiver.Remoting.Log.LogLevel.Information, $"Saved ConnectorState for EntityCreated for id {entityId}");
         }
@@ -56,6 +66,14 @@ namespace ChangeSender
 
         public void EntityUpdated(int entityId, string[] fields)
         {
+            var entity = Context.ExtensionManager.DataService.GetEntity(entityId, LoadLevel.DataAndLinks);
+            if (entity.EntityType.Id == "Task" ||
+                (entity.EntityType.Id == "Rescource" && entity.GetField("Name").Data.ToString().StartsWith("Changes_")))
+            {
+                Context.Log(inRiver.Remoting.Log.LogLevel.Information, $"This should not be saved!!! XSX");
+
+                return;
+            }
             ConnectorStateHelper.Instance.Save(GetConnectorStateId(), new CustomerYXZConnectorMessage { Action = MessageTypes.EntityUpdated, Id = entityId, User = Context.Username }, Context);
 
             Context.Log(inRiver.Remoting.Log.LogLevel.Information, $"Saved ConnectorState for EntityUpdated for id {entityId}");

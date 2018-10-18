@@ -1,0 +1,11 @@
+C:\projects\Inriver training\DeveloperTraining\CustomCompletenessCriteria\bin\Debug\CustomCompletenessCriteria.dll.config
+C:\projects\Inriver training\DeveloperTraining\CustomCompletenessCriteria\bin\Debug\Antlr3.Runtime.dll
+C:\projects\Inriver training\DeveloperTraining\CustomCompletenessCriteria\bin\Debug\inRiver.Remoting.dll
+C:\projects\Inriver training\DeveloperTraining\CustomCompletenessCriteria\bin\Debug\Newtonsoft.Json.dll
+C:\projects\Inriver training\DeveloperTraining\CustomCompletenessCriteria\bin\Debug\Antlr3.Runtime.pdb
+C:\projects\Inriver training\DeveloperTraining\CustomCompletenessCriteria\bin\Debug\Newtonsoft.Json.xml
+C:\projects\Inriver training\DeveloperTraining\CustomCompletenessCriteria\obj\Debug\CustomCompletenessCriteria.csprojAssemblyReference.cache
+C:\projects\Inriver training\DeveloperTraining\CustomCompletenessCriteria\obj\Debug\CustomCompletenessCriteria.csproj.CoreCompileInputs.cache
+C:\projects\Inriver training\DeveloperTraining\CustomCompletenessCriteria\obj\Debug\CustomCompletenessCriteria.csproj.CopyComplete
+C:\projects\Inriver training\DeveloperTraining\CustomCompletenessCriteria\obj\Debug\CustomCompletenessCriteria.dll
+C:\projects\Inriver training\DeveloperTraining\CustomCompletenessCriteria\obj\Debug\CustomCompletenessCriteria.pdb

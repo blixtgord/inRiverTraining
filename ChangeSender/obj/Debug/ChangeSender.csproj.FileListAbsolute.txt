@@ -1,0 +1,14 @@
+C:\projects\Inriver training\DeveloperTraining\ChangeSender\bin\Debug\ChangeSender.dll
+C:\projects\Inriver training\DeveloperTraining\ChangeSender\bin\Debug\ChangeSender.pdb
+C:\projects\Inriver training\DeveloperTraining\ChangeSender\bin\Debug\Antlr3.Runtime.dll
+C:\projects\Inriver training\DeveloperTraining\ChangeSender\bin\Debug\inRiver.Remoting.dll
+C:\projects\Inriver training\DeveloperTraining\ChangeSender\bin\Debug\IntegrationLib.dll
+C:\projects\Inriver training\DeveloperTraining\ChangeSender\bin\Debug\Newtonsoft.Json.dll
+C:\projects\Inriver training\DeveloperTraining\ChangeSender\bin\Debug\IntegrationLib.pdb
+C:\projects\Inriver training\DeveloperTraining\ChangeSender\bin\Debug\Antlr3.Runtime.pdb
+C:\projects\Inriver training\DeveloperTraining\ChangeSender\bin\Debug\Newtonsoft.Json.xml
+C:\projects\Inriver training\DeveloperTraining\ChangeSender\obj\Debug\ChangeSender.csprojAssemblyReference.cache
+C:\projects\Inriver training\DeveloperTraining\ChangeSender\obj\Debug\ChangeSender.csproj.CoreCompileInputs.cache
+C:\projects\Inriver training\DeveloperTraining\ChangeSender\obj\Debug\ChangeSender.csproj.CopyComplete
+C:\projects\Inriver training\DeveloperTraining\ChangeSender\obj\Debug\ChangeSender.dll
+C:\projects\Inriver training\DeveloperTraining\ChangeSender\obj\Debug\ChangeSender.pdb

@@ -14,5 +14,7 @@ namespace IntegrationLib
 
         public string User { get; set; }
 
+        public int TargetEntityId { get; set; }
+        public int SourceEntityId { get; set; }
     }
 }

@@ -60,6 +60,16 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChangeSender\ChangeSender.csproj">
+      <Project>{4e717e77-fe34-4148-9898-ce5a7853094f}</Project>
+      <Name>ChangeSender</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegrationLib\IntegrationLib.csproj">
+      <Project>{40ac8a5f-63ea-4860-b27a-9afdc729c1b9}</Project>
+      <Name>IntegrationLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

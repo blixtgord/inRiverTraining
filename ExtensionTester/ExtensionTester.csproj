@@ -66,10 +66,6 @@
       <Project>{4e717e77-fe34-4148-9898-ce5a7853094f}</Project>
       <Name>ChangeSender</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CustomCompletenessCriteria\CustomCompletenessCriteria.csproj">
-      <Project>{c6dcc38b-76b1-4587-8484-66f30d314ff7}</Project>
-      <Name>CustomCompletenessCriteria</Name>
-    </ProjectReference>
     <ProjectReference Include="..\IntegrationLib\IntegrationLib.csproj">
       <Project>{40ac8a5f-63ea-4860-b27a-9afdc729c1b9}</Project>
       <Name>IntegrationLib</Name>

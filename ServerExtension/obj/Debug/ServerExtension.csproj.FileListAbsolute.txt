@@ -1,0 +1,12 @@
+C:\projects\Inriver training\DeveloperTraining\ServerExtension\bin\Debug\ServerExtension.dll
+C:\projects\Inriver training\DeveloperTraining\ServerExtension\bin\Debug\ServerExtension.pdb
+C:\projects\Inriver training\DeveloperTraining\ServerExtension\bin\Debug\Antlr3.Runtime.dll
+C:\projects\Inriver training\DeveloperTraining\ServerExtension\bin\Debug\inRiver.Remoting.dll
+C:\projects\Inriver training\DeveloperTraining\ServerExtension\bin\Debug\Newtonsoft.Json.dll
+C:\projects\Inriver training\DeveloperTraining\ServerExtension\bin\Debug\Antlr3.Runtime.pdb
+C:\projects\Inriver training\DeveloperTraining\ServerExtension\bin\Debug\Newtonsoft.Json.xml
+C:\projects\Inriver training\DeveloperTraining\ServerExtension\obj\Debug\ServerExtension.csproj.CoreCompileInputs.cache
+C:\projects\Inriver training\DeveloperTraining\ServerExtension\obj\Debug\ServerExtension.csproj.CopyComplete
+C:\projects\Inriver training\DeveloperTraining\ServerExtension\obj\Debug\ServerExtension.dll
+C:\projects\Inriver training\DeveloperTraining\ServerExtension\obj\Debug\ServerExtension.pdb
+C:\projects\Inriver training\DeveloperTraining\ServerExtension\obj\Debug\ServerExtension.csprojAssemblyReference.cache

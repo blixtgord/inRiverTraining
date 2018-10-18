@@ -1,0 +1,12 @@
+C:\projects\Inriver training\DeveloperTraining\IntegrationLib\bin\Debug\IntegrationLib.dll
+C:\projects\Inriver training\DeveloperTraining\IntegrationLib\bin\Debug\IntegrationLib.pdb
+C:\projects\Inriver training\DeveloperTraining\IntegrationLib\bin\Debug\Antlr3.Runtime.dll
+C:\projects\Inriver training\DeveloperTraining\IntegrationLib\bin\Debug\inRiver.Remoting.dll
+C:\projects\Inriver training\DeveloperTraining\IntegrationLib\bin\Debug\Newtonsoft.Json.dll
+C:\projects\Inriver training\DeveloperTraining\IntegrationLib\bin\Debug\Antlr3.Runtime.pdb
+C:\projects\Inriver training\DeveloperTraining\IntegrationLib\bin\Debug\Newtonsoft.Json.xml
+C:\projects\Inriver training\DeveloperTraining\IntegrationLib\obj\Debug\IntegrationLib.csproj.CoreCompileInputs.cache
+C:\projects\Inriver training\DeveloperTraining\IntegrationLib\obj\Debug\IntegrationLib.csproj.CopyComplete
+C:\projects\Inriver training\DeveloperTraining\IntegrationLib\obj\Debug\IntegrationLib.dll
+C:\projects\Inriver training\DeveloperTraining\IntegrationLib\obj\Debug\IntegrationLib.pdb
+C:\projects\Inriver training\DeveloperTraining\IntegrationLib\obj\Debug\IntegrationLib.csprojAssemblyReference.cache

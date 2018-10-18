@@ -1,0 +1,12 @@
+C:\projects\Inriver training\DeveloperTraining\ResourceImport\bin\Debug\ResourceImport.dll
+C:\projects\Inriver training\DeveloperTraining\ResourceImport\bin\Debug\ResourceImport.pdb
+C:\projects\Inriver training\DeveloperTraining\ResourceImport\bin\Debug\Antlr3.Runtime.dll
+C:\projects\Inriver training\DeveloperTraining\ResourceImport\bin\Debug\inRiver.Remoting.dll
+C:\projects\Inriver training\DeveloperTraining\ResourceImport\bin\Debug\Newtonsoft.Json.dll
+C:\projects\Inriver training\DeveloperTraining\ResourceImport\bin\Debug\Antlr3.Runtime.pdb
+C:\projects\Inriver training\DeveloperTraining\ResourceImport\bin\Debug\Newtonsoft.Json.xml
+C:\projects\Inriver training\DeveloperTraining\ResourceImport\obj\Debug\ResourceImport.csprojAssemblyReference.cache
+C:\projects\Inriver training\DeveloperTraining\ResourceImport\obj\Debug\ResourceImport.csproj.CoreCompileInputs.cache
+C:\projects\Inriver training\DeveloperTraining\ResourceImport\obj\Debug\ResourceImport.csproj.CopyComplete
+C:\projects\Inriver training\DeveloperTraining\ResourceImport\obj\Debug\ResourceImport.dll
+C:\projects\Inriver training\DeveloperTraining\ResourceImport\obj\Debug\ResourceImport.pdb

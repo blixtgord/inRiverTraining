@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChangeSenderEntityListener.cs" />
+    <Compile Include="ChangeSenderLinkListener.cs" />
     <Compile Include="ChangeSenderScheduledExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -25,6 +25,8 @@ namespace ChangeSender
                 List<CustomerYXZConnectorMessage> messages = ConnectorStateHelper.Instance.PeakAllMessages(GetConnectorStateId(), Context);
                 if (messages == null || messages.Count == 0)
                 {
+                    Context.Log(LogLevel.Information, $"messages == null ({messages == null}) StateId: {GetConnectorStateId()}");
+
                     return;
                 }
 

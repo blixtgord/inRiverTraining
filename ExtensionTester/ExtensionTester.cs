@@ -1,5 +1,4 @@
-﻿using CustomCompletenessCriteria;
-using inRiver.Remoting;
+﻿using inRiver.Remoting;
 using inRiver.Remoting.Extension;
 using inRiver.Remoting.Objects;
 using ResourceImport;
@@ -26,7 +25,7 @@ namespace ExtensionTester
             //TestResourceImporter();
             //UploadToResourceImporter();
 
-            //TestChangeSender();
+            TestChangeSender();
 
             Console.ReadKey();
         }
@@ -48,7 +47,15 @@ namespace ExtensionTester
 
         static void TestChangeSender()
         {
+            RemoteManager manager = RemoteManager.CreateInstance(
+    "https://demo.remoting.productmarketingcloud.com",
+    "academy62@inriver.com",
+    "inRiverBest4Ever!"
+    );
+            ChangeSender.ChangeSenderEntityListener changeSenderEntityListener = new ChangeSender.ChangeSenderEntityListener();
+            changeSenderEntityListener.Context = new inRiverContext(manager, new ConsoleLogger());
 
+            changeSenderEntityListener.EntityCreated(102);
         }
 
 

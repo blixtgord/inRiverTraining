@@ -1,6 +1,8 @@
 ﻿using inRiver.Remoting;
 using inRiver.Remoting.Objects;
 using inRiver.Remoting.Query;
+using IntegrationLib;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -15,8 +17,9 @@ namespace API_Basics
     class ApiBasicConsoleApp
     {
         static RemoteManager remoteManager;
-        private const String PRODUCT_NUMBER = "x123456789";
-        private const string ITEM_NUMBER = "hej1234";
+        private const String PRODUCT_NUMBER = "x5-123456781";
+        private const string ITEM_NUMBER = "x5-hej1242";
+        private const string CONNECTOR_STATE_ID = "AcademyConnectorStates";
         private static Entity _product;
         private static Entity _item;
         private static Entity _resource;
@@ -32,17 +35,17 @@ namespace API_Basics
 
             #region 2. Create Entities and Link
 
-            CreateProduct();
-            CreateItem();
+            //CreateProduct();
+            //CreateItem();
             // CreateResource();
-            LinkProductToItem();
+            //LinkProductToItem();
             //LinkProductToResource();
 
             #endregion
 
             #region 3. Create CVL
 
-            CreateCVL();
+            //CreateCVL();
 
             #endregion
 
@@ -55,8 +58,23 @@ namespace API_Basics
             #endregion
 
             // Delete();
+            GenerateReport();
+
         }
 
+        private static void GenerateReport()
+        {
+            var connectorStates = remoteManager.UtilityService.GetAllConnectorStatesForConnector(CONNECTOR_STATE_ID).Select(s => JsonConvert.DeserializeObject<CustomerYXZConnectorMessage>(s.Data)).ToList();
+            foreach (var state in connectorStates)
+            {
+                if (state.Action == "EntityUpdated" || state.Action == "EntityCreated")
+                {
+                    Console.WriteLine(state.Id.ToString());
+
+                }
+            }
+           // remoteManager.UtilityService.DeleteConnectorStates(CONNECTOR_STATE_ID);
+        }
         private static RemoteManager InitRemoteManager()
         {
             try
@@ -209,18 +227,59 @@ namespace API_Basics
                 Operator = Operator.BeginsWith,
                 Value = ITEM_NUMBER
             };
-
+            ComplexQuery x = new ComplexQuery();
+            
             List<Entity> entities = remoteManager.DataService.Search(itemCriteria, LoadLevel.Shallow);
         }
 
         private static void SearchByLinkQuery()
         {
+            var lq = new LinkQuery()
+            {
+                LinkTypeId = "ProductItem",
+                Direction = LinkDirection.OutBound,
+                SourceEntityTypeId = "Product",
+                TargetEntityTypeId = "Item"
+            };
 
+            var allProductsLinked = remoteManager.DataService.LinkSearch(lq, LoadLevel.DataAndLinks);
+
+            var itemCriteria = new Criteria()
+            {
+                FieldTypeId = "ItemNumber",
+                Operator = Operator.BeginsWith,
+                Value = "X"
+            };
+
+            lq.TargetCriteria = new List<Criteria> { itemCriteria };
+            var entities = remoteManager.DataService.LinkSearch(lq, LoadLevel.DataAndLinks);
         }
 
         private static void SearchByComplexQuery()
         {
+            var lq = new LinkQuery
+            {
+                LinkTypeId = "ProductItems",
+                Direction = LinkDirection.OutBound,
+                SourceEntityTypeId = "Product",
+                TargetEntityTypeId = "Item"
+            };
 
+            var AllProductsLinkedToItems = remoteManager.DataService.LinkSearch(lq, LoadLevel.DataAndLinks);
+            var sq = new SystemQuery
+            {
+                Created = DateTime.Today.AddDays(-1),
+                CreatedOperator = Operator.GreaterThan
+            };
+
+            var complexQuery = new ComplexQuery
+            {
+                LinkQuery = lq,
+                SystemQuery = sq
+            };
+
+            var allProductsLinkedToItemsThatWasCreatedToday =
+                remoteManager.DataService.Search(complexQuery, LoadLevel.DataAndLinks);
 
         }
         #endregion
